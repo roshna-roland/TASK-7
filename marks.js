@@ -65,7 +65,9 @@ function show(){
             <th>External(60) </th>
             <th>Total</th>
         </tr>
-    </thead>`;}
+    </thead>`;
+
+
     for(var i = 0 ; i < item.length ; i++ ){
        var sub = item[i].subject;
        var fir = +item[i].firstI;
@@ -82,7 +84,9 @@ function show(){
           <td>${fir + sec + ext}</td>
           </tr>
           `;
-     }
+     }};
+
+     
      if(localStorage.getItem(fetchurl()) !== null){
         table.innerHTML +=`
             <tr>
