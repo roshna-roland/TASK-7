@@ -22,7 +22,8 @@
                                     <button type="button" class="btn-close"
                                     data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body" >
+                                    <form  id="model">
                                         <div class="form-group">
                                             <label >SUBJECT:</label>
                                             <input type="text" id="sub" class="form-control">
@@ -39,9 +40,10 @@
                                             <label >External mark: </label>
                                             <input type="text" id="tmark" class="form-control">
                                         </div>
+                                    </form>    
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-secondary" 
+                                    <button type="submit" id="submit"  class="btn btn-secondary" 
                                     data-bs-dismiss="modal">Submit</button>
                                   
                                 </div>
@@ -50,7 +52,7 @@
                     </div>
                 </div>
                 
-                <table  class="table">
+                <table  class="table ">
                     <tbody id="table" >
                     </tbody> 
                 </table>

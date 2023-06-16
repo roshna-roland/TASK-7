@@ -1,7 +1,6 @@
-
 fetchurl();
 title();
-console.log(window.location);
+
 
 function fetchurl() {
    const url = window.location.search;
@@ -13,11 +12,12 @@ function fetchurl() {
    return k;
 };
 
-document.getElementById("markentry").addEventListener("submit",markentry);
+
+document.getElementById("submit").addEventListener("click",markentry);
 
 function markentry(e){
+
     var subject = document.getElementById("sub").value;
-   console.log(subject);
     var firstI = document.getElementById("1mark").value;
     var secondI = document.getElementById("2mark").value;
     var External = document.getElementById("tmark").value;
@@ -25,15 +25,15 @@ function markentry(e){
     if(!subject || !firstI || !secondI || !External){
         alert("please fill all fields");
         return false; }
-
     var marks = {
         subject : subject,
         firstI : firstI,
         secondI : secondI,
         External : External
     };
-   
     e.preventDefault();
+    show();
+
 
      //initiate array
    if(localStorage.getItem(fetchurl()) === null){
@@ -45,16 +45,19 @@ function markentry(e){
     scores.push(marks);
     localStorage.setItem(fetchurl(),JSON.stringify(scores));
  }
+
+ document.getElementById("model").reset();
  title();
  show();
 };
+
+
 
 function show(){
     var item =JSON.parse(localStorage.getItem(fetchurl()));
     var table =document.getElementById("table");
 
     const total = document.createElement('tr');
-
     if(localStorage.getItem(fetchurl()) !== null){
     table.innerHTML=`
     <thead>
@@ -67,7 +70,6 @@ function show(){
             <th>Total</th>
         </tr>
     </thead>`;
-
 
     for(var i = 0 ; i < item.length ; i++ ){
        var sub = item[i].subject;
@@ -87,7 +89,6 @@ function show(){
           `;
      }};
 
-
      if(localStorage.getItem(fetchurl()) !== null){
         table.innerHTML +=`
             <tr>
@@ -98,14 +99,13 @@ function show(){
             <td></td>
             <td>${(fir + sec + ext)/100}</td>
             </tr>
-    `;}
+             `;
 
  };
-
  function title(){
     if(localStorage.getItem(fetchurl()) === null){
        document.getElementById("title").innerHTML="NO MARKS ADDED";
-    }
+    }  
    else{
       document.getElementById("title").innerHTML=" ";
    }};

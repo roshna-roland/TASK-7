@@ -40,9 +40,9 @@ function submittion(e){
    title();
    display();
 
-
-
 };
+
+
 function display(){
    var details =JSON.parse(localStorage.getItem("details"));
    var tablerow =document.getElementById("table");
