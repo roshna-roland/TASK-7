@@ -55,7 +55,7 @@ function display(){
          <tr>
          <th>${i+1}</th>
          <td>${name}</td>
-         <td class="text-end"><a href=${url}><button class="btn btn-light" >view mark</button></a></td>
+         <td class="text-end"><a href="marks,html"><button class="btn btn-light" >view mark</button></a></td>
          </tr>
          `;
 
