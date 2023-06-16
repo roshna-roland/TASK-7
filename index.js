@@ -49,9 +49,9 @@ function display(){
    tablerow.innerHTML=``;
    for(var i = 0 ; i < details.length ; i++ ){
       var name = details[i].stdname;
+      
 
-
-      var url = new URL("http://127.0.0.1:5500/task7/mark.html");//1
+      var url = new URL("https://roshna-roland.github.io/TASK-7/mark.html");//1
       url.searchParams.append('x', i);//2
     
 
