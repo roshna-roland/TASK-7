@@ -1,8 +1,12 @@
 title();
 
+function findurl(){
 let base = document.baseURI;
 console.log(base);
-
+var http =base+"mark.html"
+console.log(http);
+return http;
+};
 
 //listen for submit
 document.getElementById("token").addEventListener("submit",submittion);
@@ -51,7 +55,9 @@ function display(){
       var name = details[i].stdname;
       
 
-      var url = new URL("https://roshna-roland.github.io/TASK-7/mark.html");//1
+      //var url = new URL("https://roshna-roland.github.io/TASK-7/mark.html");//1
+      var url = new URL(findurl());
+      
       url.searchParams.append('x', i);//2
     
 

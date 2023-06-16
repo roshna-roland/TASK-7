@@ -17,6 +17,7 @@ document.getElementById("markentry").addEventListener("submit",markentry);
 
 function markentry(e){
     var subject = document.getElementById("sub").value;
+   console.log(subject);
     var firstI = document.getElementById("1mark").value;
     var secondI = document.getElementById("2mark").value;
     var External = document.getElementById("tmark").value;
@@ -86,7 +87,7 @@ function show(){
           `;
      }};
 
-     
+
      if(localStorage.getItem(fetchurl()) !== null){
         table.innerHTML +=`
             <tr>
