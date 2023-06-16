@@ -1,6 +1,7 @@
 
 fetchurl();
 title();
+console.log(window.location);
 
 function fetchurl() {
    const url = window.location.search;

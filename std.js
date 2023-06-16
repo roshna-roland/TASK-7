@@ -1,5 +1,9 @@
 title();
 
+let base = document.baseURI;
+console.log(base);
+
+
 //listen for submit
 document.getElementById("token").addEventListener("submit",submittion);
 
@@ -49,7 +53,7 @@ function display(){
 
       var url = new URL("http://127.0.0.1:5500/task7/mark.html");//1
       url.searchParams.append('x', i);//2
-      console.log(url);
+    
 
          tablerow.innerHTML += `
          <tr>
