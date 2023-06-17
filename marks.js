@@ -81,7 +81,7 @@ function show(){
        var ext = +item[i].External;
       var Totalpercent = (fir+  sec+ ext)/100;
       Total += Totalpercent;
-
+      console.log(Total);
 
           table.innerHTML += `
           <tr>
