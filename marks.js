@@ -67,9 +67,9 @@ function show(){
          <tr>
             <th>No</th>
             <th>Subject</th>
-            <th>First Internal(20)</th>
-            <th>Second Internal(20)</th>
-            <th>External(60) </th>
+            <th>First Internal(25)</th>
+            <th>Second Internal(25)</th>
+            <th>External(50) </th>
             <th>Total</th>
         </tr>
     </thead>`;
