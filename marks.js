@@ -22,20 +22,23 @@ function markentry(e){
     var secondI = document.getElementById("2mark").value;
     var External = document.getElementById("tmark").value;
 
+//alert
     if(!subject || !firstI || !secondI || !External){
         alert("please fill all fields");
-        return false; }
+        return false; };
+
+//creating object
     var marks = {
         subject : subject,
         firstI : firstI,
         secondI : secondI,
         External : External
     };
+
     e.preventDefault();
     show();
 
-
-     //initiate array
+ //initiate array
    if(localStorage.getItem(fetchurl()) === null){
     var scores = [];
     scores.push(marks);//add object  to array 
@@ -70,13 +73,16 @@ function show(){
             <th>Total</th>
         </tr>
     </thead>`;
-
+      var Total=0;
     for(var i = 0 ; i < item.length ; i++ ){
        var sub = item[i].subject;
        var fir = +item[i].firstI;
        var sec = +item[i].secondI;
        var ext = +item[i].External;
-    
+      var Totalpercent = (fir+  sec+ ext)/100;
+      Total += Totalpercent;
+
+
           table.innerHTML += `
           <tr>
           <th>${i+1}</th>
@@ -89,6 +95,8 @@ function show(){
           `;
      }};
 
+     var cgpa = Total /(i);
+
      if(localStorage.getItem(fetchurl()) !== null){
         table.innerHTML +=`
             <tr>
@@ -97,7 +105,7 @@ function show(){
             <td></td>
             <td></td>
             <td></td>
-            <td>${(fir + sec + ext)/100}</td>
+            <td>${cgpa}</td>
             </tr>
              `;
 
