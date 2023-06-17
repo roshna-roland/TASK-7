@@ -81,7 +81,7 @@ function show(){
        var ext = +item[i].External;
       var Totalpercent = (fir+  sec+ ext)/100;
       Total += Totalpercent;
-      console.log(Total);
+      
 
           table.innerHTML += `
           <tr>
@@ -95,7 +95,7 @@ function show(){
           `;
      }};
 
-     var cgpa = Total /(i);
+     var cgpa = (Total*10) /(i);
 
      if(localStorage.getItem(fetchurl()) !== null){
         table.innerHTML +=`
@@ -105,7 +105,7 @@ function show(){
             <td></td>
             <td></td>
             <td></td>
-            <td>${cgpa}</td>
+            <td>${cgpa.toFixed(2)}</td>
             </tr>
              `;
 
